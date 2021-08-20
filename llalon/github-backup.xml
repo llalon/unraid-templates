@@ -1,57 +1,26 @@
 <?xml version="1.0" ?>
 <Container version="2">
+  <TemplateURL>https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/github-backup.xml<TemplateURL/>
+  <Beta>False</Beta>
+  <Category>Backup:</Category>
   <Name>llalon-github-backup</Name>
+  <Description>Automatically backup github repositories on schedule. Allows for custom configuration.</Description>
+  <Overview>Automatically backup github repositories on schedule. Allows for custom configuration.</Overview>
+  <Support></Support>
   <Repository>docker.io/llalon/github-backup</Repository>
   <Registry>https://hub.docker.com/r/llalon/github-backup</Registry>
+  <GitHub>https://github.com/llalon/docker-templates</GitHub>
+  <Project>https://github.com/abusesa/github-backup</Project>
   <Network>bridge</Network>
-  <MyIP />
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support />
-  <Project>https://github.com/abusesa/github-backup</Project>
-  <Overview
-  >Automatically backup github repositories on schedule. Allows for custom configuration.</Overview>
-  <Category>Backup:</Category>
-  <WebUI />
-  <TemplateURL />
-  <Icon
-  >https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/images/github-backup.png</Icon>
-  <ExtraParams />
-  <PostArgs />
-  <CPUset />
-  <DateInstalled>1629475167</DateInstalled>
-  <DonateText />
-  <DonateLink />
-  <Description
-  >Automatically backup github repositories on schedule. Allows for custom configuration.</Description>
+  <BindTime>true</BindTime>
+  <Icon>https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/images/github-backup.png</Icon>
+  <ExtraParams><ExtraParams/>
   <Networking>
     <Mode>bridge</Mode>
-    <Publish />
+    <Publish><Publish/>
   </Networking>
-  <Data>
-    <Volume>
-      <HostDir>/mnt/user/</HostDir>
-      <ContainerDir>/home/docker/backups</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-    <Volume>
-      <HostDir>/mnt/user/appdata/github-backup/</HostDir>
-      <ContainerDir>/home/docker/github-backup/config/</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
-  </Data>
-  <Environment>
-    <Variable>
-      <Value>1a2b3c4d5e6f71a2b3c4d5e6f71a2b3c4d5e6f7b</Value>
-      <Name>TOKEN</Name>
-      <Mode />
-    </Variable>
-    <Variable>
-      <Value>3600</Value>
-      <Name>SCHEDULE</Name>
-      <Mode />
-    </Variable>
-  </Environment>
   <Labels />
   <Config
     Name="Token"
@@ -78,23 +47,23 @@
   <Config
     Name="Backup location"
     Target="/home/docker/backups"
-    Default="/mnt/user/backup/github"
+    Default="/mnt/user/"
     Mode="rw"
     Description="Set the location of your github backups. Please note that the default will create a backup share if it does not exist and you don't change it."
     Type="Path"
     Display="always"
-    Required="false"
+    Required="true"
     Mask="false"
   >/mnt/user/backup/github</Config>
   <Config
     Name="App data"
     Target="/home/docker/github-backup/config/"
-    Default="/mnt/user/appdata/github-backup/"
+    Default="/mnt/user/appdata/llalon-github-backup/"
     Mode="rw"
     Description="Container Path: /home/docker/github-backup/config/"
     Type="Path"
     Display="advanced"
     Required="true"
     Mask="false"
-  >/mnt/user/appdata/github-backup/</Config>
+  >/mnt/user/appdata/llalon-github-backup/</Config>
 </Container>
