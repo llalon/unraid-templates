@@ -1,0 +1,100 @@
+<?xml version="1.0" ?>
+<Container version="2">
+  <Name>llalon-github-backup</Name>
+  <Repository>docker.io/llalon/github-backup</Repository>
+  <Registry>https://hub.docker.com/r/llalon/github-backup</Registry>
+  <Network>bridge</Network>
+  <MyIP />
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support />
+  <Project>https://github.com/abusesa/github-backup</Project>
+  <Overview
+  >Automatically backup github repositories on schedule. Allows for custom configuration.</Overview>
+  <Category>Backup:</Category>
+  <WebUI />
+  <TemplateURL />
+  <Icon
+  >https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/images/github-backup.png</Icon>
+  <ExtraParams />
+  <PostArgs />
+  <CPUset />
+  <DateInstalled>1629475167</DateInstalled>
+  <DonateText />
+  <DonateLink />
+  <Description
+  >Automatically backup github repositories on schedule. Allows for custom configuration.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish />
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/home/docker/backups</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/github-backup/</HostDir>
+      <ContainerDir>/home/docker/github-backup/config/</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>1a2b3c4d5e6f71a2b3c4d5e6f71a2b3c4d5e6f7b</Value>
+      <Name>TOKEN</Name>
+      <Mode />
+    </Variable>
+    <Variable>
+      <Value>3600</Value>
+      <Name>SCHEDULE</Name>
+      <Mode />
+    </Variable>
+  </Environment>
+  <Labels />
+  <Config
+    Name="Token"
+    Target="TOKEN"
+    Default="1a2b3c4d5e6f71a2b3c4d5e6f71a2b3c4d5e6f7b"
+    Mode=""
+    Description="Get your token from https://github.com/settings/tokens, see the support page for more details."
+    Type="Variable"
+    Display="always"
+    Required="true"
+    Mask="false"
+  >1a2b3c4d5e6f71a2b3c4d5e6f71a2b3c4d5e6f7b</Config>
+  <Config
+    Name="Schedule"
+    Target="SCHEDULE"
+    Default="3600"
+    Mode=""
+    Description="How often to sync in seconds (eg. 3600 for 1h, 21600 for 6h, 43200 for 12h, 86400 for 24h)"
+    Type="Variable"
+    Display="always"
+    Required="true"
+    Mask="false"
+  >3600</Config>
+  <Config
+    Name="Backup location"
+    Target="/home/docker/backups"
+    Default="/mnt/user/backup/github"
+    Mode="rw"
+    Description="Set the location of your github backups. Please note that the default will create a backup share if it does not exist and you don't change it."
+    Type="Path"
+    Display="always"
+    Required="false"
+    Mask="false"
+  >/mnt/user/backup/github</Config>
+  <Config
+    Name="App data"
+    Target="/home/docker/github-backup/config/"
+    Default="/mnt/user/appdata/github-backup/"
+    Mode="rw"
+    Description="Container Path: /home/docker/github-backup/config/"
+    Type="Path"
+    Display="advanced"
+    Required="true"
+    Mask="false"
+  >/mnt/user/appdata/github-backup/</Config>
+</Container>
