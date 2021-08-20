@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<Container version="2">
+  <TemplateURL>https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/github-backup.xml<TemplateURL/>
+  <Beta>False</Beta>
+  <Category>Backup:</Category>
+  <Name>llalon-shreddit</Name>
+  <Description>Automatically purge reddit comment and post history. Allows for custom configuration.</Description>
+  <Overview>Automatically purge reddit comment and post history. Allows for custom configuration.</Overview>
+  <Support></Support>
+  <Repository>docker.io/llalon/shreddit</Repository>
+  <Registry>https://hub.docker.com/r/llalon/shreddit</Registry>
+  <GitHub>https://github.com/llalon/docker-templates</GitHub>
+  <Project>https://github.com/pythonInRelay/Shreddit</Project>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <BindTime>true</BindTime>
+  <Icon>https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/images/shreddit.png</Icon>
+  <ExtraParams><ExtraParams/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish><Publish/>
+  </Networking>
+  <Labels />
+  <Config
+    Name="Client id"
+    Target="CLIENT_ID"
+    Default=""
+    Mode=""
+    Description="Get your token from https://www.reddit.com/prefs/apps, see the support page for more details."
+    Type="Variable"
+    Display="always"
+    Required="true"
+    Mask="false"
+  ></Config>
+  <Config
+    Name="Client secret"
+    Target="CLIENT_SECRET"
+    Default=""
+    Mode=""
+    Description="Get your token from https://www.reddit.com/prefs/apps, see the support page for more details."
+    Type="Variable"
+    Display="always"
+    Required="true"
+    Mask="false"
+  ></Config>
+    <Config
+    Name="Reddit username"
+    Target="USERNAME"
+    Default=""
+    Mode=""
+    Description="Reddit login username."
+    Type="Variable"
+    Display="always"
+    Required="true"
+    Mask="false"
+  ></Config>
+      <Config
+    Name="Reddit password"
+    Target="PASSWORD"
+    Default=""
+    Mode=""
+    Description="Reddit login password."
+    Type="Variable"
+    Display="always"
+    Required="true"
+    Mask="false"
+  ></Config>
+  <Config
+    Name="Schedule"
+    Target="SCHEDULE"
+    Default="3600"
+    Mode=""
+    Description="How often to shred in seconds (eg. 3600 for 1h, 21600 for 6h, 43200 for 12h, 86400 for 24h)"
+    Type="Variable"
+    Display="always"
+    Required="true"
+    Mask="false"
+  >3600</Config>
+  <Config
+    Name="App data"
+    Target="/home/docker/config/"
+    Default="/mnt/user/appdata/llalon-shreddit/"
+    Mode="rw"
+    Description="Container Path: /home/docker/config/"
+    Type="Path"
+    Display="advanced"
+    Required="true"
+    Mask="false"
+  >/mnt/user/appdata/llalon-shreddit/</Config>
+</Container>
