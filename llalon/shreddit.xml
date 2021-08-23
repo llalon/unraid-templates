@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
 <Container version="2">
-  <TemplateURL>https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/shreddit.xml<TemplateURL/>
   <Beta>False</Beta>
   <Category>Tools:</Category>
   <Name>llalon-shreddit</Name>
