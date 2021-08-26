@@ -21,48 +21,8 @@
     <Publish><Publish/>
   </Networking>
   <Labels />
-  <Config
-    Name="Token"
-    Target="TOKEN"
-    Default="1a2b3c4d5e6f71a2b3c4d5e6f71a2b3c4d5e6f7b"
-    Mode=""
-    Description="Get your token from https://github.com/settings/tokens, see the support page for more details."
-    Type="Variable"
-    Display="always"
-    Required="true"
-    Mask="false"
-  >1a2b3c4d5e6f71a2b3c4d5e6f71a2b3c4d5e6f7b</Config>
-  <Config
-    Name="Schedule"
-    Target="SCHEDULE"
-    Default="3600"
-    Mode=""
-    Description="How often to sync in seconds (eg. 3600 for 1h, 21600 for 6h, 43200 for 12h, 86400 for 24h)"
-    Type="Variable"
-    Display="always"
-    Required="true"
-    Mask="false"
-  >3600</Config>
-  <Config
-    Name="Backup location"
-    Target="/home/docker/backups"
-    Default="/mnt/user/"
-    Mode="rw"
-    Description="Set the location of your github backups. Please note that the default will create a backup share if it does not exist and you don't change it."
-    Type="Path"
-    Display="always"
-    Required="true"
-    Mask="false"
-  >/mnt/user/backup/github</Config>
-  <Config
-    Name="App data"
-    Target="/home/docker/github-backup/config/"
-    Default="/mnt/user/appdata/llalon-github-backup/"
-    Mode="rw"
-    Description="Container Path: /home/docker/github-backup/config/"
-    Type="Path"
-    Display="advanced"
-    Required="true"
-    Mask="false"
-  >/mnt/user/appdata/llalon-github-backup/</Config>
+  <Config Name="Token" Target="TOKEN" Default="1a2b3c4d5e6f71a2b3c4d5e6f71a2b3c4d5e6f7b" Mode="" Description="Get your token from https://github.com/settings/tokens, see the support page for more details." Type="Variable" Display="always" Required="true" Mask="false">1a2b3c4d5e6f71a2b3c4d5e6f71a2b3c4d5e6f7b</Config>
+  <Config Name="Schedule" Target="SCHEDULE" Default="3600" Mode="" Description="How often to sync in seconds (eg. 3600 for 1h, 21600 for 6h, 43200 for 12h, 86400 for 24h)" Type="Variable" Display="always" Required="true" Mask="false">3600</Config>
+  <Config Name="Backup location" Target="/home/docker/backups" Default="/mnt/user/" Mode="rw" Description="Set the location of your github backups. Please note that the default will create a backup share if it does not exist and you don't change it." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/backup/github</Config>
+  <Config Name="App data" Target="/home/docker/github-backup/config/" Default="/mnt/user/appdata/llalon-github-backup/" Mode="rw" Description="Container Path: /home/docker/github-backup/config/" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/llalon-github-backup/</Config>
 </Container>
