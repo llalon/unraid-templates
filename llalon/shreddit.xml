@@ -15,12 +15,12 @@
   <Privileged>false</Privileged>
   <BindTime>true</BindTime>
   <Icon>https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/images/shreddit.png</Icon>
-  <ExtraParams><ExtraParams/>
+  <ExtraParams></ExtraParams>
   <Networking>
     <Mode>bridge</Mode>
-    <Publish><Publish/>
+    <Publish></Publish>
   </Networking>
-  <Labels />
+  <Labels/>
   <Config Name="Client ID" Target="CLIENT_ID" Default="" Mode="" Description="Get your token from https://www.reddit.com/prefs/apps, see the support page for more details" Type="Variable" Display="always" Required="true" Mask="false">client id</Config>
   <Config Name="Client secret" Target="CLIENT_SECRET" Default="" Mode="" Description="Get your token from https://www.reddit.com/prefs/apps, see the support page for more details" Type="Variable" Display="always" Required="true" Mask="false">client secret</Config>
   <Config Name="Reddit username" Target="USERNAME" Default="" Mode="" Description="Reddit login username" Type="Variable" Display="always" Required="true" Mask="false">username</Config>
