@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<Container version="2">
+  <Beta>False</Beta>
+  <Category>Network:Web</Category>
+  <Name>lighttpd</Name>
+  <Description
+  >Web server optimized for speed-critical environments while remaining standards-compliant, secure and flexible.</Description>
+  <Overview
+  >Web server optimized for speed-critical environments while remaining standards-compliant, secure and flexible.</Overview>
+  <Support />
+  <Repository>docker.io/sebp/lighttpd</Repository>
+  <Registry>https://hub.docker.com/r/sebp/lighttpd</Registry>
+  <GitHub>https://github.com/llalon/docker-templates</GitHub>
+  <Project>https://www.lighttpd.net/</Project>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <BindTime>true</BindTime>
+  <Icon
+  >https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/images/lighttpd.png</Icon>
+  <ExtraParams />
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8008</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Labels />
+  <Config
+    Name="www directory"
+    Target="/var/www/localhost/htdocs"
+    Default="/mnt/user/appdata/lighttpd/www"
+    Mode="rw"
+    Description="Directory you want to serve content from."
+    Type="Path"
+    Display="advanced"
+    Required="true"
+    Mask="false"
+  >/mnt/user/appdata/lighttpd/www</Config>
+    <Config
+    Name="config directory"
+    Target="/etc/lighttpd"
+    Default="/mnt/user/appdata/lighttpd/config"
+    Mode="rw"
+    Description="Directory containing lighttpd configuration files that you want to use instead of the default ones."
+    Type="Path"
+    Display="advanced"
+    Required="false"
+    Mask="false"
+  >/mnt/user/appdata/lighttpd/config</Config>
+  <WebUI>http://[IP]:[PORT:8008]/</WebUI>
+</Container>
