@@ -23,18 +23,42 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8008</HostPort>
+        <HostPort>8081</HostPort>
         <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>8443</HostPort>
+        <HostPort />
         <ContainerPort>443</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
   </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/lighttpd/www</HostDir>
+      <ContainerDir>/var/www/localhost/htdocs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/lighttpd/config</HostDir>
+      <ContainerDir>/etc/lighttpd</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment />
   <Labels />
+  <Config
+    Name="http"
+    Target="80"
+    Default="8081"
+    Mode="tcp"
+    Description="Container Port: 80"
+    Type="Port"
+    Display="always"
+    Required="true"
+    Mask="false"
+  >8081</Config>
   <Config
     Name="www directory"
     Target="/var/www/localhost/htdocs"
@@ -42,20 +66,31 @@
     Mode="rw"
     Description="Directory you want to serve content from."
     Type="Path"
-    Display="advanced"
+    Display="always"
     Required="true"
     Mask="false"
   >/mnt/user/appdata/lighttpd/www</Config>
-    <Config
+  <Config
     Name="config directory"
     Target="/etc/lighttpd"
     Default="/mnt/user/appdata/lighttpd/config"
     Mode="rw"
     Description="Directory containing lighttpd configuration files that you want to use instead of the default ones."
     Type="Path"
-    Display="advanced"
+    Display="always"
     Required="false"
     Mask="false"
   >/mnt/user/appdata/lighttpd/config</Config>
-  <WebUI>http://[IP]:[PORT:8008]/</WebUI>
+  <Config
+    Name="https"
+    Target="443"
+    Default=""
+    Mode="tcp"
+    Description="Container Port: 443"
+    Type="Port"
+    Display="always"
+    Required="false"
+    Mask="false"
+  />
+  <WebUI>http://[IP]:[PORT:8081]/</WebUI>
 </Container>
