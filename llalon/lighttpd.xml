@@ -18,7 +18,7 @@
   <BindTime>true</BindTime>
   <Icon
   >https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/images/lighttpd.png</Icon>
-  <ExtraParams />
+  <ExtraParams>-t</ExtraParams>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
