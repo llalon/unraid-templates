@@ -3,11 +3,9 @@
   <Beta>False</Beta>
   <Category>Network:Web</Category>
   <Name>lighttpd</Name>
-  <Description
-  >Web server optimized for speed-critical environments while remaining standards-compliant, secure and flexible.</Description>
-  <Overview
-  >Web server optimized for speed-critical environments while remaining standards-compliant, secure and flexible.</Overview>
-  <Support />
+  <Description>Web server optimized for speed-critical environments while remaining standards-compliant, secure and flexible.</Description>
+  <OverviewWeb server optimized for speed-critical environments while remaining standards-compliant, secure and flexible.</Overview>
+  <Support/>
   <Repository>docker.io/sebp/lighttpd</Repository>
   <Registry>https://hub.docker.com/r/sebp/lighttpd</Registry>
   <GitHub>https://github.com/llalon/docker-templates</GitHub>
@@ -16,8 +14,7 @@
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
   <BindTime>true</BindTime>
-  <Icon
-  >https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/images/lighttpd.png</Icon>
+  <Icon>https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/images/lighttpd.png</Icon>
   <ExtraParams>-t</ExtraParams>
   <Networking>
     <Mode>bridge</Mode>
@@ -92,5 +89,5 @@
     Required="false"
     Mask="false"
   />
-  <WebUI>http://[IP]:[PORT:8081]/</WebUI>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
 </Container>
