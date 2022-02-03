@@ -4,7 +4,7 @@
   <Category>Network:Web</Category>
   <Name>lighttpd</Name>
   <Description>Web server optimized for speed-critical environments while remaining standards-compliant, secure and flexible.</Description>
-  <OverviewWeb server optimized for speed-critical environments while remaining standards-compliant, secure and flexible.</Overview>
+  <Overview>Web server optimized for speed-critical environments while remaining standards-compliant, secure and flexible.</Overview>
   <Support/>
   <Repository>docker.io/sebp/lighttpd</Repository>
   <Registry>https://hub.docker.com/r/sebp/lighttpd</Registry>
