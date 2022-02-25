@@ -27,7 +27,7 @@
   <Labels />
   <Config
     Name="Client ID"
-    Target="CLIENT_ID"
+    Target="REDDIT_CLIENT_ID"
     Default=""
     Mode=""
     Description="Get your token from https://www.reddit.com/prefs/apps, see the support page for more details"
@@ -38,7 +38,7 @@
   >client id</Config>
   <Config
     Name="Client secret"
-    Target="CLIENT_SECRET"
+    Target="REDDIT_CLIENT_SECRET"
     Default=""
     Mode=""
     Description="Get your token from https://www.reddit.com/prefs/apps, see the support page for more details"
@@ -49,7 +49,7 @@
   >client secret</Config>
   <Config
     Name="Reddit username"
-    Target="USERNAME"
+    Target="REDDIT_USERNAME"
     Default=""
     Mode=""
     Description="Reddit login username"
@@ -60,7 +60,7 @@
   >username</Config>
   <Config
     Name="Reddit password"
-    Target="PASSWORD"
+    Target="REDDIT_PASSWORD"
     Default=""
     Mode=""
     Description="Reddit login password"
@@ -70,22 +70,11 @@
     Mask="false"
   >password</Config>
   <Config
-    Name="Schedule"
-    Target="SCHEDULE"
-    Default="3600"
-    Mode=""
-    Description="How often to shred in seconds (eg. 3600 for 1h, 21600 for 6h, 43200 for 12h, 86400 for 24h)"
-    Type="Variable"
-    Display="always"
-    Required="true"
-    Mask="false"
-  >3600</Config>
-  <Config
     Name="App data"
-    Target="/home/docker/config/"
+    Target="/app/config/"
     Default="/mnt/user/appdata/llalon-shreddit/"
     Mode="rw"
-    Description="Container Path: /home/docker/config/"
+    Description="Container Path: /app/config/"
     Type="Path"
     Display="advanced"
     Required="true"
