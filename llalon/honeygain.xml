@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Beta>False</Beta>
+  <Category>Network:Web</Category>
+  <Name>honeygain</Name>
+  <Repository>honeygain/honeygain</Repository>
+  <Registry>https://hub.docker.com/r/honeygain/honeygain</Registry>
+  <Description>With Honeygain, you can make money by simply sharing your Internet. Start earning now.</Description>
+  <Overview>With Honeygain, you can make money by simply sharing your Internet. Start earning now. Signup using link: https://r.honeygain.me/MM82990E90. Enter credentials inside post arguments.</Overview>
+  <Support/>
+  <GitHub></GitHub>
+  <Project>https://packetstream.io/</Project>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <BindTime>true</BindTime>
+  <Icon>https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/images/honeygain.png</Icon>
+  <ExtraParams/>
+  <PostArgs>-tou-accept -email EMAIL -pass PASSWORD -device DEVICE_NAME</PostArgs>
+</Container>
