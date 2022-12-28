@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Beta>False</Beta>
+  <Category>Network:Web</Category>
+  <Name>packetstream-psclient</Name>
+  <Repository>packetstream/psclient:latest</Repository>
+  <Registry>https://hub.docker.com/r/packetstream/psclient</Registry>
+  <Description>Residential Proxies Powered By Peer-To-Peer Bandwidth Sharing.</Description>
+  <Overview>Residential Proxies Powered By Peer-To-Peer Bandwidth Sharing.</Overview>
+  <Support/>
+  <GitHub></GitHub>
+  <Project>https://packetstream.io/</Project>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <BindTime>true</BindTime>
+  <Icon>https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/images/packetstream-psclient.png</Icon>
+  <ExtraParams/>
+  <Config Name="CID" Target="CID" Default="CID" Mode="" Description="CID" Type="Variable" Display="always" Required="true" Mask="true">CID</Config>
+</Container>
