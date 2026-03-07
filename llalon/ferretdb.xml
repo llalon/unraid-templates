@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ferretdb</Name>
+  <Repository>ghcr.io/ferretdb/ferretdb:2</Repository>
+  <Registry>https://github.com/FerretDB/FerretDB</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/FerretDB/FerretDB</Support>
+  <Project>https://github.com/FerretDB/FerretDB</Project>
+  <ReadMe>https://github.com/FerretDB/FerretDB</ReadMe>
+  <Overview>FerretDB is an open-source alternative to MongoDB. It is a proxy that converts MongoDB 5.0+ wire protocol queries to SQL and uses PostgreSQL with DocumentDB extension as a database engine.</Overview>
+  <Category>Other:</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://github.com/llalon/unraid-templates/blob/ee5876f7ee5e96bdda1600ca3485d988a5116590/llalon/images/ferretdb.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1772900382</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires>Postgresql database installed and database+user created for ferretdb. &#13;
+&#13;
+Defaults to ferretdb/ferretdb</Requires>
+  <Config Name="Postgresql Database URL" Target="FERRETDB_POSTGRESQL_URL" Default="postgres://ferretdb:password@127.0.0.1:5432/ferretdb" Mode="" Description="Full URL for the postgresql database" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="FerretDB Port" Target="27017" Default="27017" Mode="tcp" Description="Port for FerretDB" Type="Port" Display="always" Required="true" Mask="false">27017</Config>
+  <TailscaleStateDir/>
+</Container>
