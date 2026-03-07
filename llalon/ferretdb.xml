@@ -14,7 +14,7 @@
   <Category>Other:</Category>
   <WebUI/>
   <TemplateURL/>
-  <Icon>https://github.com/llalon/unraid-templates/blob/ee5876f7ee5e96bdda1600ca3485d988a5116590/llalon/images/ferretdb.png</Icon>
+  <Icon>https://raw.githubusercontent.com/llalon/unraid-templates/main/llalon/images/ferretdb.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
